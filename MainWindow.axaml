@@ -1,0 +1,198 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" Height="600" Width="400"
+        x:Class="phoneNumber.MainWindow"
+        Title="phoneNumber">
+	<Window.Styles>
+		<Styles>
+			<Style Selector="Button:pointerover /template/ ContentPresenter">
+				<Setter Property="Background" Value="#418ef2"/>
+			</Style>
+		</Styles>
+	</Window.Styles>
+
+	<Grid RowDefinitions=", *, " Background="">
+
+		<TextBlock
+			VerticalAlignment="Top"
+			HorizontalAlignment="Center"
+			Text="Please enter your phone number:"
+			Margin="20"
+			FontSize="16"
+			FontWeight="Black"
+/>
+
+		<TextBlock
+			VerticalAlignment="Top"
+			HorizontalAlignment="Center"
+			Text="Please enter your phone number:"
+			Margin="0, 150"
+			FontSize="16"
+			FontWeight="Black"
+/>
+
+		<TextBlock
+			VerticalAlignment="Bottom"
+			HorizontalAlignment="Center"
+			Text="Please enter your phone number:"
+			Margin="0, 200"
+			FontSize="16"
+			FontWeight="Black"
+  />
+
+		<MaskedTextBox
+		 x:Name="Input"
+  
+		 Height="20"
+		 Width="150"
+		 VerticalContentAlignment="Center"
+		 VerticalAlignment="Top"
+		 HorizontalAlignment="Center"
+		 Margin="0, 60, 110, 0"
+		 Mask="+00000000000"
+  
+  />
+		<Button
+		 x:Name="ButtonClickPlus"
+		 Click="ClickPlus"
+		 Cursor="Hand"
+		 HorizontalAlignment="Center"
+		 VerticalAlignment="Top"
+		 VerticalContentAlignment="Center"
+		 HorizontalContentAlignment="Center"
+		 Height="27"
+		 Width="27"
+		 Margin="0, 62, -90, 0"
+		 Content="+"
+		 FontSize="13"
+		 FontWeight="Bold"
+		 Background="WhiteSmoke"
+  
+  />
+
+		<Button
+		 x:Name="ButtonClickRandom"
+		 Click="RandomClick"
+		 Cursor="Hand"
+		 HorizontalAlignment="Center"
+		 VerticalAlignment="Top"
+		 VerticalContentAlignment="Center"
+		 HorizontalContentAlignment="Center"
+		 Content="Random"
+		 Height="27"
+		 Margin="200, 62, 0, 0"
+		 FontWeight="DemiBold"
+		 Background="WhiteSmoke"
+  />
+
+		<Button
+		 x:Name="ButtonClickOutput"
+		 Click="NextOutputClick"
+		 Cursor="Hand"
+		 HorizontalAlignment="Center"
+		 VerticalAlignment="Center"
+		 VerticalContentAlignment="Center"
+		 HorizontalContentAlignment="Center"
+		 Content="Next"
+		 Height="27"
+		 Margin="0, 0, 215, 30"
+		 FontWeight="DemiBold"
+		 Background="WhiteSmoke"
+  />
+
+		<Button
+		 x:Name="ButtonClickOutputSlider"
+		 Click="SliderOutputClick"
+		 Cursor="Hand"
+		 HorizontalAlignment="Center"
+		 VerticalAlignment="Bottom"
+		 HorizontalContentAlignment="Center"
+		 VerticalContentAlignment="Center"
+		 Content="Next"
+		 Height="27"
+		 Margin="-210, 0, 0, 80"
+		 Width="50"
+		 FontWeight="DemiBold"
+		 Background="WhiteSmoke"
+  />
+
+		<ComboBox
+		 SelectedItem="FirstCbItem"
+		 FontSize="13"
+		 Background="Gainsboro"
+		 CornerRadius="5"
+		 Cursor="Hand"
+		 x:Name="MyComboBox"
+		 HorizontalAlignment="Left"
+		 VerticalAlignment="Center"
+		 Margin="68, 0, 0, 170">
+
+
+		</ComboBox>
+
+		<ComboBox
+		 FontSize="13"
+		 Background="Gainsboro"
+		 CornerRadius="5"
+		 Cursor="Hand"
+		 x:Name="MyComboBox2"
+		 HorizontalAlignment="Center"
+		 VerticalAlignment="Center"
+		 Margin="-48, 0, 0, 170">
+
+		</ComboBox>
+
+		<ComboBox
+  
+		 FontSize="13"
+		 Background="Gainsboro"
+		 CornerRadius="5"
+		 Cursor="Hand"
+		 x:Name="MyComboBox3"
+		 HorizontalAlignment="Center"
+		 VerticalAlignment="Center"
+		 Margin="108, 0, 0, 170">
+
+		</ComboBox>
+
+		<Slider
+		 x:Name="SliderNumber"
+		 HorizontalAlignment=""
+		 VerticalAlignment="Bottom"
+		 Margin="0, 0, 0, 120"
+		 Width="300"
+		 Maximum="9999999999"
+		 Minimum="0"
+		 FlowDirection="LeftToRight"
+  
+  />
+		<TextBlock
+		 x:Name="message"
+		 Text="{Binding #SliderNumber.Value}"
+		 HorizontalAlignment="Center"
+		 VerticalAlignment="Bottom"
+		 Margin="110"
+  
+  />
+
+		<TextBlock
+		 x:Name="sliderMessage"
+		 Text=""
+		 HorizontalAlignment="Center"
+		 VerticalAlignment="Bottom"
+		 Margin="0, 0, 0, 50"
+  
+  
+  />
+
+		<TextBlock
+		 x:Name="comboboxMessage"
+		 Text=""
+		 HorizontalAlignment="Center"
+		 VerticalAlignment="Center"
+		 Margin="0, 40, 0, 0"
+			/>
+	</Grid>
+</Window>
